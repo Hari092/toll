@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Toll Management App" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Toll Management App</title>
+  </head>
+  <body>
+    <h2>Toll Management Application</h2>
+    <div class="head">
+      <div class="header">
+        <h3 id="changeHead">Toll entries/Vehicle entries |</h3>
+        <h3 id="filter-btn" class="filter-btn">
+          <i class="fa-solid fa-arrow-down-wide-short"></i>
+        </h3>
+        <input
+          type="search"
+          name="search"
+          id="search-btn"
+          class="search-btn"
+          placeholder="search Vehicle"
+        />
+      </div>
+      <div class="feature-btns">
+        <button class="toll-info" id="vehicle-entry">Add Vehicle Entry</button>
+        <button class="toll-info" id="new-toll">Add New toll</button>
+        <button class="toll-info" id="all-toll">view all tolls</button>
+      </div>
+    </div>
+
+    <div class="filter">
+      <ul class="filter-elments" id="filter-elments">
+        <li>All</li>
+      </ul>
+    </div>
+
+    <div class="vehicle-container">
+      <div class="passenger-details">
+        <ul class="detail-header detail">
+          <li>VEHICLE TYPE</li>
+          <li>VEHICLE NUMBER</li>
+          <li>DATE/TIME</li>
+          <li>TOLL NAME</li>
+          <li>TRAIFF</li>
+        </ul>
+        <ul class="detail">
+          <li>VEHICLE TYPE</li>
+          <li>VEHICLE NUMBER</li>
+          <li>DATE/TIME</li>
+          <li>TOLL NAME</li>
+          <li>TRAIFF</li>
+        </ul>
+        <ul class="detail">
+          <li>VEHICLE TYPE</li>
+          <li>VEHICLE NUMBER</li>
+          <li>DATE/TIME</li>
+          <li>TOLL NAME</li>
+          <li>TRAIFF</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="vehicle-container">
+      <div class="passenger-details">
+        <!-- <ul class="vehicle-header">
+          <li>TOLL NAME</li>
+          <li>CAR/JEEP/VAN</li>
+          <li>LCV</li>
+          <li>TRUCK/BUS</li>
+          <li>HEAVY VEHICLE</li>
+        </ul> -->
+      </div>
+    </div>
+
+    <div class="addvehilce-container">
+      <div class="addvehilce">
+        <h2 class="entry">Add New Entry</h2>
+        <div class="select-toll">
+          <h3 class="heading">
+            Select Toll Name<span style="color: red">*</span>
+          </h3>
+          <h3 class="toll-area">
+            Kappalur<span><i class="fa-solid fa-angle-down"></i></span>
+          </h3>
+        </div>
+        <div class="select-vehicle">
+          <h3 class="heading">
+            Select vehicle Type<span style="color: red">*</span>
+          </h3>
+          <select name="vehicleType" class="dropdown-menu vehicle-type">
+            <option value="" disabled selected>Select vehicle type</option>
+            <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+            <option value="LCV">LCV</option>
+            <option value="Truck/Bus">Truck/Bus</option>
+            <option value="Heavy vehicle">Heavy vehicle</option>
+          </select>
+        </div>
+        <div class="get-vehicle-number">
+          <h3 class="heading">
+            Vehicle Number<span style="color: red">*</span>
+          </h3>
+          <input
+            type="text"
+            name="getVehicleNum"
+            id="getVehicleNum"
+            placeholder="Enter your login id"
+            required
+          />
+        </div>
+        <div class="get-vehicle-traiff">
+          <h3 class="heading">Traiff<span style="color: red">*</span></h3>
+          <input
+            type="text"
+            name="getVehicleTraiff"
+            id="getVehicleTraiff"
+            placeholder="Enter your login id"
+          />
+        </div>
+        <button type="submit" id="getVehicle-btn">Add Entry</button>
+      </div>
+    </div>
+
+    <div class="Addnewtoll">
+      <div class="toll">
+        <form id="newTollForm">
+          <h3 class="toll-head">Add new toll</h3>
+          <div class="toll-name">
+            <h3>Toll Name<span style="color: red">*</span></h3>
+            <input
+              type="text"
+              id="gettoll"
+              placeholder="Enter toll name"
+              class="gettoll"
+              required
+            />
+          </div>
+          <h3>Vehicle fare details<span style="color: red">*</span></h3>
+          <div class="vehicle-fare">
+            <div class="gettollfare">
+              <select name="vehicleType" class="dropdown-menu">
+                <option value="" disabled selected>Select vehicle type</option>
+                <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+                <option value="LCV">LCV</option>
+                <option value="Truck/Bus">Truck/Bus</option>
+                <option value="Heavy vehicle">Heavy vehicle</option>
+              </select>
+              <input
+                type="text"
+                name="single"
+                class="single"
+                placeholder="Single Journey"
+              />
+              <input
+                type="text"
+                name="return"
+                class="return"
+                placeholder="Return Journey"
+              />
+            </div>
+            <div class="gettollfare">
+              <select name="vehicleType" class="dropdown-menu">
+                <option value="" disabled selected>Select vehicle type</option>
+                <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+                <option value="LCV">LCV</option>
+                <option value="Truck/Bus">Truck/Bus</option>
+                <option value="Heavy vehicle">Heavy vehicle</option>
+              </select>
+              <input
+                type="text"
+                name="single"
+                class="single"
+                placeholder="Single Journey"
+              />
+              <input
+                type="text"
+                name="return"
+                class="return"
+                placeholder="Return Journey"
+              />
+            </div>
+            <div class="gettollfare">
+              <select name="vehicleType" class="dropdown-menu">
+                <option value="" disabled selected>Select vehicle type</option>
+                <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+                <option value="LCV">LCV</option>
+                <option value="Truck/Bus">Truck/Bus</option>
+                <option value="Heavy vehicle">Heavy vehicle</option>
+              </select>
+              <input
+                type="text"
+                name="single"
+                class="single"
+                placeholder="Single Journey"
+              />
+              <input
+                type="text"
+                name="return"
+                class="return"
+                placeholder="Return Journey"
+              />
+            </div>
+            <div class="gettollfare">
+              <select name="vehicleType" class="dropdown-menu">
+                <option value="" disabled selected>Select vehicle type</option>
+                <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+                <option value="LCV">LCV</option>
+                <option value="Truck/Bus">Truck/Bus</option>
+                <option value="Heavy vehicle">Heavy vehicle</option>
+              </select>
+              <input
+                type="text"
+                name="single"
+                class="single"
+                placeholder="Single Journey"
+              />
+              <input
+                type="text"
+                name="return"
+                class="return"
+                placeholder="Return Journey"
+              />
+            </div>
+          </div>
+          <button type="submit" id="gettoll-btn">Add details</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
